@@ -8,6 +8,7 @@ app = Flask('myapp', template_folder=tmpl_dir)
 app = Flask(__name__)
 
 @app.route('/')
-def hello(name='Hello World!'):
-	#return render_template('hello.html', name=name)
-	return name
+def hello():
+	name='Hello World!'
+	return render_template('hello.html', name=name)
+	#return name
