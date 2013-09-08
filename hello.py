@@ -2,11 +2,9 @@ import os
 from flask import Flask
 from flask import render_template
 
-PROJECT_DIR = os.path.dirname(__file__) # this is not Django setting.
-TEMPLATE_DIRS = (
-    os.path.join(PROJECT_DIR, "templates"),
-    # here you can add another templates directory if you wish.
-)
+tmpl_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates')
+# ...
+app = Flask('myapp', template_folder=tmpl_dir)
 app = Flask(__name__)
 
 @app.route('/')
