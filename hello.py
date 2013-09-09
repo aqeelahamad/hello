@@ -46,4 +46,4 @@ def hello():
 		b.append(str(a[i]['text']))
 	b=str(b)
 	h='hello'
-	return render_template('sh.html',name=h)
+	return render_template('hello.html',name=h)
