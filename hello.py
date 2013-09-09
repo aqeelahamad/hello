@@ -10,5 +10,5 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
 	name='Hello World!'
-	return render_template('hello.html', name=name)
+	return render_template('hello.html')
 	#return name
