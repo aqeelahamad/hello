@@ -36,14 +36,6 @@ bodyoauth = OAuth1(client_key, client_secret,
 
 @app.route('/')
 def hello():
-	payload = {'screen_name': 'syawalhafriz','count':10}
-	url = 'https://api.twitter.com/1.1/statuses/user_timeline.json'
-	r = requests.get(url, auth=oauth,params=payload)
-	#return str(r.json())
-	a=r.json()
-	b=[]
-	for i in range(payload['count']):
-		b.append(str(a[i]['text']))
-	b=str(b)
-	h='hello'
-	return render_template('hello.html',name=h)
+	name='Hello World!'
+	return render_template('hello.html',name=name)
+	#return name
