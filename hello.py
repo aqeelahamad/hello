@@ -2,10 +2,10 @@ import os
 from flask import Flask
 from flask import render_template
 
-tmpl_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates')
+#tmpl_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates')
 # ...
-app = Flask('myapp', template_folder=tmpl_dir)
-app = Flask(__name__)
+#app = Flask('myapp', template_folder=tmpl_dir)
+#app = Flask(__name__)
 
 @app.route('/')
 def hello():
